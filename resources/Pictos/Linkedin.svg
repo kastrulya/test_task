@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>UI / Pictos / Linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M18.6042162,13.9696503 L18.6042162,19 L15.6877531,19 L15.6877531,14.306776 C15.6877531,13.1283587 15.2666722,12.3236072 14.2107077,12.3236072 C13.4048687,12.3236072 12.9261502,12.8654007 12.7147398,13.3900117 C12.6379622,13.5774971 12.6181697,13.8378451 12.6181697,14.1008031 L12.6181697,18.9997825 L9.70148904,18.9997825 C9.70148904,18.9997825 9.74063912,11.0510122 9.70148904,10.2282081 L12.6183872,10.2282081 L12.6183872,11.471223 C12.6125146,11.4810105 12.6042496,11.4905806 12.5990296,11.4999331 L12.6183872,11.4999331 L12.6183872,11.471223 C13.0059729,10.8748369 13.6971892,10.0222352 15.2468797,10.0222352 C17.1656684,10.0222352 18.6042162,11.2759076 18.6042162,13.9696503 Z M6.65039317,6 C7.64828509,6 8.26141877,6.65489376 8.28077631,7.51532541 C8.28077631,8.35748703 7.64828509,9.03130333 6.63103564,9.03130333 L6.6121131,9.03130333 C5.63379622,9.03130333 5,8.35748703 5,7.51532541 C5,6.65489376 5.65271876,6 6.65039317,6 Z M5.17334783,19 L5.17334783,10.2282081 L8.08894094,10.2282081 L8.08894094,19 L5.17334783,19 Z" id="path-1"></path>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Closers-/-UI---Landing-Page" transform="translate(-927.000000, -4518.000000)">
+            <g id="footer" transform="translate(0.000000, 4274.000000)">
+                <g id="UI-/-Pictos-/-Linkedin" transform="translate(927.000000, 244.000000)">
+                    <circle id="Oval-Copy" fill="#EBEEF2" cx="16" cy="16" r="16"></circle>
+                    <g id="Atoms-/-icons-/-System-/-SM-Linkedin" transform="translate(4.000000, 4.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#C2D1D9" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="⚙️Atoms/Colour/Brow" mask="url(#mask-2)" fill="#303030" fill-rule="evenodd">
+                            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
