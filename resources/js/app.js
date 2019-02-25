@@ -4,28 +4,15 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-import Layout from './components/Layout.vue';
-import ExampleComponent from './components/ExampleComponent.vue';
-
+import Vue from 'vue';
 import 'reset-css';
+import Layout from './components/Layout.vue';
+import appearOnScroll from './directives/transitionInViewport';
 
 require('./bootstrap');
 
-window.Vue = require('vue');
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
 Vue.component('layout', Layout);
-Vue.component('example-component', ExampleComponent);
+Vue.directive('transition-in-viewport', appearOnScroll);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -36,7 +23,6 @@ Vue.component('example-component', ExampleComponent);
 const app = new Vue({
     el: '#app',
     components: {
-        Layout,
-        ExampleComponent
+        Layout
     }
 });

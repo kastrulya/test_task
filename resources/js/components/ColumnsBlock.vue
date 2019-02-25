@@ -1,7 +1,7 @@
 <template>
     <div class="columns-wrapper">
         <h2>How it works</h2>
-        <div class="columns">
+        <div v-transition-in-viewport="animateColumn" class="columns">
             <div class="column">
                 <img src="../../assets/Elements/Illustrations/Sales.png" alt="match closers">
                 <h3>Request to join</h3>
@@ -32,7 +32,18 @@
 
     export default {
         name: 'columns-block',
-        components: {ActionButton}
+        components: {ActionButton},
+        methods: {
+            animateColumn (el, part) {
+                let columns = el.querySelectorAll('.column');
+                for (let i = 0; i < columns.length; i++) {
+                    setTimeout(() => {
+                        columns[i].style.opacity = part / 100;
+                        columns[i].style.top = `${(100 - part)}px`;
+                    }, i * 300);
+                }
+            }
+        }
     }
 </script>
 
@@ -77,6 +88,12 @@
     .action {
         display: block;
         margin: 0 auto;
-        /*padding: 15px 35px*/
+    }
+
+    .column {
+        position: relative;
+        opacity: 0;
+        top: 100px;
+        transition: opacity 1s, top 1s;
     }
 </style>

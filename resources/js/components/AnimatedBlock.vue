@@ -1,16 +1,17 @@
 <template>
     <div :class="className">
         <div class="description">
-            <slot name="icon"></slot>
+            <slot name="icon" />
             <h3>
-                <slot name="header"></slot>
+                <slot name="header" />
             </h3>
-            <slot name="description"></slot>
+            <slot name="description" />
             <action-button class="action"/>
         </div>
 
-        <div class="illustration">
-            <slot name="illustration"></slot>
+        <div v-transition-in-viewport="leftIllustrated? leftIllustratedTransition : rightIllustratedTransition"
+             class="illustration animated">
+            <slot name="illustration" />
         </div>
     </div>
 </template>
@@ -29,7 +30,15 @@
         },
         computed: {
             className () {
-                return `info${this.$props.leftIllustrated ? ' left-illustrated' : ''}`
+                return `info ${this.$props.leftIllustrated ? 'left-illustrated' : 'right-illustrated'}`;
+            }
+        },
+        methods: {
+            rightIllustratedTransition (el, part) {
+                el.style.left = `${100 - part}vw`;
+            },
+            leftIllustratedTransition (el, part) {
+                el.style.right = `${100 - part}vw`;
             }
         }
     }
@@ -78,11 +87,14 @@
     }
 
     .illustration {
+        display: flex;
+        margin: auto 0;
+        text-align: right;
+    }
+
+    .right-illustrated .illustration {
         grid-row: 1;
         grid-column: 2;
-        display: flex;
-        margin: auto;
-        text-align: right;
     }
 
     .left-illustrated .illustration {
@@ -94,6 +106,19 @@
     .left-illustrated .description {
         grid-row: 1;
         grid-column: 2;
+    }
+
+    .illustration.animated {
+        position: relative;
+        transition: right 100ms, left 100ms;
+    }
+
+    .right-illustrated .illustration.animated {
+        left: 100vw;
+    }
+
+    .left-illustrated .illustration.animated {
+        right: 100vw;
     }
 
 </style>
