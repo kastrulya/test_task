@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import Logo from './Logo'
+    import Logo from './Logo';
 
     export default {
         name: 'header-closer',

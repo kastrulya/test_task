@@ -57,8 +57,10 @@
         padding: 60px 0 0 18px;
     }
 
-    .description img {
+    .description .icon {
         margin-bottom: 30px;
+        width: 26px;
+        height: 26px;
     }
 
     h3 {

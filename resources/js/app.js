@@ -4,25 +4,17 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+
+
+import Layout from './components/Layout';
 import Vue from 'vue';
 import 'reset-css';
-import Layout from './components/Layout.vue';
+import './bootstrap';
 import appearOnScroll from './directives/transitionInViewport';
 
-require('./bootstrap');
-
-Vue.component('layout', Layout);
 Vue.directive('transition-in-viewport', appearOnScroll);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-const app = new Vue({
+export default new Vue({
     el: '#app',
-    components: {
-        Layout
-    }
+    render: h => h(Layout)
 });

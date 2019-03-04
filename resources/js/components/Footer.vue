@@ -40,18 +40,18 @@
                     <ul>
                         <li>
                             <a href="">
-                                <img src="../../assets/Pictos/Fb.svg" alt="facebook icon" class="contacts-icon" />
+                                <Icon class-name="contacts-icon" :glyph="fb.id" :view-box="fb.viewBox"/>
                                 <span>Facebook</span>
                             </a></li>
                         <li>
                             <a href="">
-                                <img src="../../assets/Pictos/Linkedin.svg" alt="linkedin icon" class="contacts-icon" />
+                                <Icon class-name="contacts-icon" :glyph="linkedin.id" :view-box="linkedin.viewBox"/>
                                 <span>LinkedIn</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="../../assets/Pictos/Angelist.svg" alt="AngelList icon" class="contacts-icon" >
+                                <Icon class-name="contacts-icon" :glyph="angelList.id" :view-box="angelList.viewBox"/>
                                 <span>AngelList</span>
                             </a>
                         </li>
@@ -69,7 +69,7 @@
 
         <div class="footer-bottom">
             <div class="country">
-                <img src="../../assets/Pictos/us.svg" alt="US Flag">
+                <Icon class-name="icon" :view-box="us.viewBox" :glyph="us.id" />
                 <span class="country-text">English (United States)</span>
             </div>
             <span class="copyright">&copy; closers.com 2018</span>
@@ -78,11 +78,25 @@
 </template>
 
 <script>
-    import Logo from './Logo'
+    import fb from '../../assets/Pictos/Fb.svg';
+    import linkedin from '../../assets/Pictos/Linkedin.svg';
+    import angelList from '../../assets/Pictos/Angelist.svg';
+    import us from '../../assets/Pictos/us.svg';
+
+    import Logo from './Logo';
+    import Icon from './Icon';
 
     export default {
         name: 'footer-closers',
-        components: {Logo}
+        components: {Logo, Icon},
+        data() {
+            return {
+                fb,
+                linkedin,
+                angelList,
+                us
+            }
+        }
     }
 </script>
 
@@ -140,7 +154,7 @@
         font-weight: 500;
     }
 
-    .country img {
+    .country .icon {
         width: 24px;
         height: 24px;
         margin-right: 20px;

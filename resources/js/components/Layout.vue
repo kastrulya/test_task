@@ -8,7 +8,7 @@
 
             <animated-block left-illustrated>
                 <template v-slot:icon>
-                    <img src="../../assets/Pictos/Opportunities_Click.svg" alt="suitcase">
+                    <Icon class-name="icon" :view-box="opportunities1.viewBox" :glyph="opportunities1.id" />
                 </template>
                 <template v-slot:illustration>
                     <img src="../../assets/Elements/Illustrations/01.png" alt="Profile image">
@@ -26,7 +26,7 @@
 
             <animated-block>
                 <template v-slot:icon>
-                    <img src="../../assets/Pictos/Opportunities_Click_2.svg" alt="suitcase">
+                    <Icon class-name="icon" :view-box="opportunities2.viewBox" :glyph="opportunities2.id" />
                 </template>
                 <template v-slot:illustration>
                     <img src="../../assets/Elements/Illustrations/02.png" alt="connections">
@@ -73,6 +73,10 @@
     import ColumnsBlock from './ColumnsBlock';
     import Motto from './Motto';
     import FooterClosers from './Footer';
+    import Icon from './Icon';
+
+    import opportunities1 from '../../assets/Pictos/Opportunities_Click.svg';
+    import opportunities2 from '../../assets/Pictos/Opportunities_Click_2.svg';
 
     export default {
         name: 'layout',
@@ -83,7 +87,14 @@
             ActionButton,
             ColumnsBlock,
             Motto,
-            FooterClosers
+            FooterClosers,
+            Icon
+        },
+        data() {
+            return {
+                opportunities1,
+                opportunities2
+            };
         }
     }
 </script>

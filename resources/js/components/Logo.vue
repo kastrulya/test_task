@@ -1,22 +1,29 @@
 <template>
     <a href="/">
         <h1 class="logo">
-            <img src="../../assets/icon-gold.svg"
-                 alt="Closers logotype"
-                 :class="className"/>
+            <Icon :className="className" :viewBox="logo.viewBox" :glyph="logo.id"/>
             <span class="logo-text">closers.com</span>
         </h1>
     </a>
 </template>
 
 <script>
+    import Icon from './Icon';
+    import logo from '../../assets/icon-gold.svg';
+
     export default {
         name: 'logo',
+        components: { Icon },
         props: {
             color: {
                 type: String,
                 default: 'orange'
             }
+        },
+        data() {
+            return {
+                logo
+            };
         },
         computed: {
             className () {
@@ -34,7 +41,7 @@
     }
 
     .logo-img.dark {
-        filter: brightness(0);
+        color: black;
     }
 
     .logo-img.orange {
