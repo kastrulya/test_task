@@ -41,11 +41,11 @@
     }
 
     .logo-img.dark {
-        color: black;
+        fill: black;
     }
 
     .logo-img.orange {
-        color: #EBAE50;
+        fill: #EBAE50;
     }
 
     .logo-text {
